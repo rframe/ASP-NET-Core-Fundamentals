@@ -9,7 +9,6 @@
 /bin/*
 !/bin/data/
 
-*/wwwroot/lib
 # general
 
 [Bb]uild/
