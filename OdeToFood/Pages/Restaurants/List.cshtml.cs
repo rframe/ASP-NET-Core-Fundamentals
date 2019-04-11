@@ -26,12 +26,6 @@ namespace OdeToFood.Pages.Restaurants
             _restaurantData = restaurantData;
         }
 
-        // search term is a input model
-        //public void OnGet(string searchTerm)
-        //{
-        //    Message = _config["Message"];
-        //    Restaurants = _restaurantData.GetRestaurantsByName(searchTerm);
-        //}
         public void OnGet()
         {
             Message = _config["Message"];
