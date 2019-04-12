@@ -30,7 +30,7 @@ namespace OdeToFood.Pages.Restaurants
 
         public void OnGet()
         {
-            Message = Message ?? _config["Message"];
+            //Message = Message ?? _config["Message"];
             Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
