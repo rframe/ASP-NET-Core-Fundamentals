@@ -23,23 +23,28 @@
 <table class="table">
     @foreach (var restaurant in Model.Restaurants)
     {
-    <tr>
-        <td>@restaurant.Name</td>
-        <td>@restaurant.Location</td>
-        <td>@restaurant.Cuisine</td>
-        <td>
-            <a asp-page="./Detail"
-               asp-route-restaurantId="@restaurant.Id"
-               class="btn btn-lg">
-                <i class="glyphicon glyphicon-zoom-in"></i>
-            </a>
-            <a asp-page="./Edit"
-               asp-route-restaurantId="@restaurant.Id"
-               class="btn btn-lg">
-                <i class="glyphicon glyphicon-edit"></i>
-            </a>
-        </td>
-    </tr>
+        <tr>
+            <td>@restaurant.Name</td>
+            <td>@restaurant.Location</td>
+            <td>@restaurant.Cuisine</td>
+            <td>
+                <a asp-page="./Detail"
+                   asp-route-restaurantId="@restaurant.Id"
+                   class="btn btn-lg">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+                <a asp-page="./Edit"
+                   asp-route-restaurantId="@restaurant.Id"
+                   class="btn btn-lg">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a asp-page="./Delete"
+                   asp-route-restaurantId="@restaurant.Id"
+                   class="btn btn-lg">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </td>
+        </tr>
     }
 </table>
 <a asp-page="./Edit"
@@ -47,4 +52,11 @@
     Add New
 </a>
 
-<div>@Model.Message</div>
+@*@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}*@
+
+@section footer {
+    <div>@Model.Message</div>
+}

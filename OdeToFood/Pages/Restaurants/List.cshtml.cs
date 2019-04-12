@@ -13,6 +13,8 @@ namespace OdeToFood.Pages.Restaurants
         private readonly IRestaurantData _restaurantData;
 
         // Output models
+        //public string Message { get; set; }
+        [TempData]
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
 
@@ -28,7 +30,7 @@ namespace OdeToFood.Pages.Restaurants
 
         public void OnGet()
         {
-            Message = _config["Message"];
+            Message = Message ?? _config["Message"];
             Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
