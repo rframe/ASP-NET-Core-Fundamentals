@@ -19,6 +19,18 @@ namespace OdeToFood
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                //.ConfigureAppConfiguration((hostingContext, config) =>
+                //{
+
+                //    config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json",
+                //        optional: true, reloadOnChange: true);
+                    
+                //    //config.SetBasePath(Directory.GetCurrentDirectory());
+
+                //    //config.AddJsonFile("json_array.json", optional: true, reloadOnChange: true);
+                //    //config.AddJsonFile("starship.json", optional: true, reloadOnChange: true);
+                //    //config.AddXmlFile("tvshow.xml", optional: true, reloadOnChange: true);
+                //})
                 .UseStartup<Startup>();
     }
 }
